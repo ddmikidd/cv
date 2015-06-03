@@ -1,0 +1,35 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font: 16px arial, sans-serif;
+  line-height: 1.7rem;
+  color: $font-color-main;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color-main;
+  &:hover {
+    color: $font-color-light;
+  }
+}
+
+.logoText {
+  font-size: 14px;
+  line-height: 0.8;
+  margin-top: -6px;
+  margin-bottom: 15px;
+}
+
+.errorMsg {
+  display: none;
+}

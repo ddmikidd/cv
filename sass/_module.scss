@@ -1,0 +1,44 @@
+.scrollDown-arrow {
+  display: block;
+  position: relative;
+  margin-top: 50px;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  &:before {
+    bottom: 0;
+    -webkit-transition: border-top-color 0.5s ease;
+    -moz-transition: border-top-color 0.5s ease;
+    -o-transition: border-top-color 0.5s ease;
+    transition: border-top-color 0.5s ease;
+    border-top: 20px solid white;
+  }
+  &:after {
+    bottom: 2px;
+    border-top: 20px solid $blue-light;
+  }
+  &:hover {
+    &:before {
+    border-top: 20px solid $yellow-light;
+  }
+  }
+}
+
+.pure-btn {
+
+}
+.btn-large {}
+.btn-small {}
+.btn-search {}
+
+table {}
+input {}
+

@@ -1,0 +1,32 @@
+.delay {
+  @include transition-property(opacity);
+  @include transition-timing-function(ease-in-out);
+  @include transition-duration(1.5s);
+  opacity: 0;
+  &.delay-1 {
+    @include transition-delay(.3s);
+  }
+  &.delay-2 {
+    @include transition-delay(.4s);
+  }
+  &.delay-3 {
+    @include transition-delay(.8s);
+  }
+  &.delay-4 {
+    @include transition-delay(1s);
+  }
+  &.delay-5 {
+    @include transition-delay(1.3s);
+  }
+}
+
+.loaded {
+  .delay {
+    opacity: 1;
+  }
+}
+
+.btn {}
+.btn-is-active {}
+.btn-is-disabled {}
+.is-hidden {}

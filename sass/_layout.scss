@@ -1,0 +1,108 @@
+.layoutHeader {
+  header {
+    text-align: center;
+    background-color: white;
+  }
+  &.scroll {
+    height: 60px;
+  }
+}
+
+.layoutLogo {
+  padding-top: 5px;
+}
+
+.layoutHeader--nav {
+  position: fixed;
+  margin: 15px 0;
+  top: 60px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid $font-color-main;
+  border-bottom: 1px solid $font-color-main;
+  background-color: white;
+  &.scroll {
+    top: 0;
+    opacity: .8;
+    z-index: 10;
+  }
+}
+
+.layoutHeader--menu {
+  width: 1000px;
+  margin: 0 auto;
+  > li {
+    text-align: center;
+    display: inline-block;
+    width: 24%;
+    a {
+      font: 12px Arial, sans-serif;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.layoutSection {
+  @extend %clearfix;
+  margin: 0 auto;
+  padding: 100px 0 50px;
+  max-width: 1000px;
+}
+
+.layoutHome {
+  //background: url("../images/bk-blue.png");
+  background-color : $blue-light;
+}
+.layoutContact {
+  background: #f5f551;
+}
+.layoutFooter {
+  background: pink;
+}
+.layoutMain--intro {
+  text-align: center;
+}
+
+.layoutMain-projectBox {
+  float: left;
+  width: calc((100% - 30px) / 3);
+  margin: 5px;
+  border: 5px solid #3E3E41;
+}
+.layoutMain-projectBox-title {
+  padding: 50px;
+  text-align: center;
+}
+.contactForm-wrapper {
+  padding: 50px 0;
+}
+.contactForm {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.nameLabel,
+.emailLabel {
+  width: 100px;
+  display: inline-block;
+}
+.nameInput,
+.emailInput,
+.submitButton {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+
+

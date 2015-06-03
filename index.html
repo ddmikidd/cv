@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miki Doi - Front-end developer</title>
+    <link rel="stylesheet" href="cssmin/style.min.css"/>
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="images/favicon/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="images/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/favicon/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
+</head>
+<body>
+    <div id="home" class="layoutPage">
+        <div class="layoutHeader">
+            <header>
+              <div class="layoutLogo">
+                <canvas id="logoAnimation"></canvas>
+                <p class="logoText">Front-end developer</p>
+              </div>
+                <nav class="layoutHeader--nav">
+                    <ul class="layoutHeader--menu">
+                        <li><a href="#home">Hem</a></li>
+                        <li><a href="#project">Projekt</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                        <li><a href="#about">Om Miki</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="layoutMain">
+            <div class="layoutHome">
+                <section class="layoutSection">
+                    <p class="layoutMain--intro themeMain--intro">
+                        <span class="delay delay-1">Jag är</span><br>
+                        <span class="delay delay-2">Front-end utvecklare</span><br>
+                        <span class="delay delay-3">med passion</span><br>
+                        <span class="delay delay-4">för design</span>
+                    </p>
+                    <a href="#project" class="scrollDown-arrow delay delay-5"></a>
+                </section>
+            </div>
+            <div id="project" class="layoutProject">
+                <section class="layoutSection">
+                    <h2 class="layoutMain--intro themeMain--intro">Projekt</h2>
+                    <div class="layoutMain-projectBox">
+                        <p class="layoutMain-projectBox-title">Lensway</p>
+                    </div>
+                    <div class="layoutMain-projectBox">
+                        <p class="layoutMain-projectBox-title">Fira ofta</p>
+                    </div>
+                    <div class="layoutMain-projectBox">
+                        <p class="layoutMain-projectBox-title">Aldente</p>
+                    </div>
+
+                </section>
+            </div>
+            <div id="contact" class="layoutContact">
+                <section class="layoutSection">
+                    <h2 class="layoutMain--intro themeMain--intro">Kontakt</h2>
+                    <div class="contactForm-wrapper">
+                        <p>Jag kontaktar dig tills <span id="answerDate"></span>.</p>
+                    </div>
+                </section>
+            </div>
+            <div id="about" class="layoutAbout">
+                <section class="layoutSection">
+                    <h2 class="layoutMain--intro themeMain--intro">Om Miki</h2>
+                    <p>
+                        Jag har erfarenhet av att arbeta med Git, JIRA, WebStorm, Wordpress, Twitter
+                        Bootstrap, Drupal, Photoshop, Illustrator, InDesign och Sketch.
+                    </p>
+                    <p>
+                        2008 bodde jag i Italien under ett år för att studera konst och grafisk design.
+                        Därefter arbetade jag som grafisk formgivare på ett tryckeri i Japan och det krävs
+                        mycket noggrannhet. Där arbetade jag med Photoshop, Illustrator och InDesign.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="layoutFooter">
+          <section class="layoutSection">
+            <p>Miki Doi frontend utvecklare</p>
+          </section>
+        </div>
+    </div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/logo.js"></script>
+<script src="js/general.js"></script>
+<script src="js/date.js"></script>
+</body>
+</html>
