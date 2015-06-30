@@ -1,0 +1,38 @@
+.logoLoader {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  display: block;
+  margin: 0 auto;
+}
+#loadigLogoBase,
+#sprouts {
+  top: 0;
+  left: 0;
+  //width: 100%;
+  //height: 100%;
+}
+.layoutLogo {
+	position: absolute;
+	//opacity: 0;
+	//cursor: default;
+	//pointer-events: none;
+    padding-top: 5px;
+    //transform: translate3d(0,25%,0);
+}
+
+.loaded {
+  .logoLoader {
+    //animation: animLoadedHeader 10s cubic-bezier(0.7,0,0.3,1) forwards;
+  }
+}
+//@keyframes animLoadedHeader {
+//  to { transform: translate3d(0,-100%,0); }
+//}
+
+
+

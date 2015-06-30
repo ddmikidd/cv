@@ -1,15 +1,18 @@
-.layoutHeader {
+.layoutHeader { 
   header {
     text-align: center;
     background-color: white;
+    height: 105px;
+    @include breakpoint(middle-point) {
+      height: 0;
+    }
   }
   &.scroll {
     height: 60px;
+    @include breakpoint(middle-point) {
+      height: 0;
+    }
   }
-}
-
-.layoutLogo {
-  padding-top: 5px;
 }
 
 .layoutHeader--nav {
@@ -21,6 +24,9 @@
   border-top: 1px solid $font-color-main;
   border-bottom: 1px solid $font-color-main;
   background-color: white;
+  @include breakpoint(middle-point) {
+    display: none;
+  }
   &.scroll {
     top: 0;
     opacity: .8;
@@ -29,7 +35,7 @@
 }
 
 .layoutHeader--menu {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   > li {
     text-align: center;
@@ -39,29 +45,22 @@
       font: 12px Arial, sans-serif;
       text-transform: uppercase;
       display: inline-block;
-      padding: 10px 0;
+      padding: 10px 25px;
       font-weight: 600;
     }
   }
 }
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
+//layoutSection is like a container
 .layoutSection {
-  @extend %clearfix;
+  //@extend %clearfix;//Susy has already clearfix
+  //max-width: 1000px;//Susy has already max-width
+  @include container;//This is coming from Susy
   margin: 0 auto;
-  padding: 100px 0 50px;
-  max-width: 1000px;
+  padding: 100px 10px 50px;
+
 }
 
 .layoutHome {
-  //background: url("../images/bk-blue.png");
   background-color : $blue-light;
 }
 .layoutContact {
@@ -69,23 +68,13 @@
 }
 .layoutFooter {
   background: pink;
-}
-.layoutMain--intro {
-  text-align: center;
+  padding: 50px 0;
 }
 
-.layoutMain-projectBox {
-  float: left;
-  width: calc((100% - 30px) / 3);
-  margin: 5px;
-  border: 5px solid #3E3E41;
-}
-.layoutMain-projectBox-title {
-  padding: 50px;
-  text-align: center;
-}
-.contactForm-wrapper {
+.contactFormContainer {
   padding: 50px 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .contactForm {
   text-align: center;
@@ -103,6 +92,17 @@
   margin-bottom: 20px;
 }
 
-
-
-
+//Susy is a plugin to Compass that allows you 
+//to create customizable grid frameworks easily
+.susy-col-6 {
+  @include span(6);//This is coming from Susy
+}
+.susy-col-6-last {
+  @include span(6 last);//This is coming from Susy
+}
+.susy-col-2 {
+  @include span(2);//This is coming from Susy
+}
+.susy-col-2-last {
+  @include span(2 last);
+}

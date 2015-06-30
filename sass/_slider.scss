@@ -1,0 +1,22 @@
+.sliderContainer {
+  width: 144px;
+  height: 144px;
+  margin: 0 auto;
+}
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  width: 1000px;
+}
+.slider li {
+  float: left;
+}
+.slider-nav {
+  display: none;
+}
+.slider-nav button {
+  padding: 1em;
+  cursor: pointer;
+}

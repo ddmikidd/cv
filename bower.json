@@ -1,0 +1,19 @@
+{
+  "name": "miki_cv",
+  "version": "0.0.0",
+  "authors": [
+    "ddmikidd <ddmikiddpatty@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1"
+  }
+}

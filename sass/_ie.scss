@@ -3,3 +3,11 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+
+//These lines are to get responsive layouts to render properly 
+//in IE10 both for Snap Mode and Windows Phone8
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}

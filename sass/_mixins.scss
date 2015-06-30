@@ -1,0 +1,10 @@
+//
+// Mixin is...
+// When you want the output of the mixin 
+// to change depending on how you call it
+//
+@mixin breakpoint($media) {
+  @if ($media == middle-point) {
+    @media screen and (max-width: $bigger_bk_point) { @content; }
+  }
+}

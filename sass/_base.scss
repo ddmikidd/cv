@@ -1,13 +1,29 @@
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  //@include box-sizing(border-box); 
+  //this is from compass/css3 but no need coz of sussy?
+  
+//  -webkit-box-sizing: border-box;
+//  -moz-box-sizing: border-box;
+//  box-sizing: border-box;
 }
+
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+  //@include box-sizing(inherit);
+  //this is from compass/css3 but no need coz of sussy?
+  
+//  -webkit-box-sizing: inherit;
+//  -moz-box-sizing: inherit;
+//  box-sizing: inherit;
 }
+//Code above:
+//The border and padding values 
+//were moved inside the element's box, 
+//cutting into the width/height of the box 
+//rather than expanding it.
+//IE 8 doesn't recognize border-box 
+//on elements with min/max-width or min/max-height
+//IE 7 and below needs polyfill 
+//https://github.com/Schepp/box-sizing-polyfill
 
 body {
   font: 16px arial, sans-serif;

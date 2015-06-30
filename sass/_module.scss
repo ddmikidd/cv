@@ -27,9 +27,63 @@
   }
   &:hover {
     &:before {
-    border-top: 20px solid $yellow-light;
+      border-top: 20px solid $yellow-light;
+    }
   }
+}
+
+.projectBoxContainer {
+  //@extend %clearfix;//Susy has already clearfix
+  @include container;//This is coming from Susy
+  margin: 50px 0;
+  display: none;
+}
+
+// thanks to Susy this is not necessary
+//.projectBox {
+  //float: left;
+  //width: calc((100% - 72px) / 6); //6px*12
+  //margin: 6px;
+//}
+.project {
+  opacity: 0;
+  height: 144px;
+  @include transition-property(opacity);
+  @include transition-timing-function(ease-in-out);
+  @include transition-duration(.6s);
+  &.project1.visible {
+    @include transition-delay(.1s);
   }
+  &.project2.visible {
+    @include transition-delay(.2s);
+  }
+  &.project3.visible {
+    @include transition-delay(.3s);
+  }
+  &.project-soon.visible {
+    @include transition-delay(.5s);
+  }
+}
+.active {
+  .project {
+    opacity: 1;
+  }
+}
+.project1 {
+  background: url("../images/firaofta-144.png") center no-repeat;
+}
+.project2 {
+  background: url("../images/aldente.png") center no-repeat;
+}
+.project3 {
+  background: url("../images/stenSaxPase.png") center no-repeat;
+}
+.project-soon {
+  background: url("../images/soon.png") center no-repeat;
+}
+.projectBox-title {
+  padding: 50px;
+  text-align: center;
 }
 
 .pure-btn {

@@ -54,16 +54,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 .layoutHeader header {
   text-align: center;
   background-color: white;
+  height: 105px;
+}
+@media screen and (max-width: 800px) {
+  .layoutHeader header {
+    height: 0;
+  }
 }
 .layoutHeader.scroll {
   height: 60px;
 }
-
-.layoutLogo {
-  padding-top: 5px;
+@media screen and (max-width: 800px) {
+  .layoutHeader.scroll {
+    height: 0;
+  }
 }
 
 .layoutHeader--nav {
@@ -76,6 +92,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom: 1px solid #48484A;
   background-color: white;
 }
+@media screen and (max-width: 800px) {
+  .layoutHeader--nav {
+    display: none;
+  }
+}
 .layoutHeader--nav.scroll {
   top: 0;
   opacity: .8;
@@ -83,7 +104,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .layoutHeader--menu {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .layoutHeader--menu > li {
@@ -95,20 +116,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font: 12px Arial, sans-serif;
   text-transform: uppercase;
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px 25px;
   font-weight: 600;
 }
 
-.layoutSection:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .layoutSection {
-  margin: 0 auto;
-  padding: 100px 0 50px;
   max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  padding: 100px 10px 50px;
+}
+.layoutSection:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .layoutHome {
@@ -121,26 +143,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .layoutFooter {
   background: pink;
-}
-
-.layoutMain--intro {
-  text-align: center;
-}
-
-.layoutMain-projectBox {
-  float: left;
-  width: calc((100% - 30px) / 3);
-  margin: 5px;
-  border: 5px solid #3E3E41;
-}
-
-.layoutMain-projectBox-title {
-  padding: 50px;
-  text-align: center;
-}
-
-.contactForm-wrapper {
   padding: 50px 0;
+}
+
+.contactFormContainer {
+  padding: 50px 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contactForm {
@@ -161,16 +170,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 20px;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.susy-col-6 {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+.susy-col-6-last {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+}
+
+.susy-col-2 {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+.susy-col-2-last {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+}
+
+.logoLoader {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  display: block;
+  margin: 0 auto;
+}
+
+#loadigLogoBase,
+#sprouts {
+  top: 0;
+  left: 0;
+}
+
+.layoutLogo {
+  position: absolute;
+  padding-top: 5px;
 }
 
 body {
@@ -227,6 +271,85 @@ a:hover {
 }
 .scrollDown-arrow:hover:before {
   border-top: 20px solid #FFF99F;
+}
+
+.projectBoxContainer {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 50px 0;
+  display: none;
+}
+.projectBoxContainer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.project {
+  opacity: 0;
+  height: 144px;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+.project.project1.visible {
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.project.project2.visible {
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.project.project3.visible {
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.project.project-soon.visible {
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.active .project {
+  opacity: 1;
+}
+
+.project1 {
+  background: url("../images/firaofta-144.png") center no-repeat;
+}
+
+.project2 {
+  background: url("../images/aldente.png") center no-repeat;
+}
+
+.project3 {
+  background: url("../images/stenSaxPase.png") center no-repeat;
+}
+
+.project-soon {
+  background: url("../images/soon.png") center no-repeat;
+}
+
+.projectBox-title {
+  padding: 50px;
+  text-align: center;
 }
 
 .delay {
@@ -289,6 +412,7 @@ a:hover {
   font-weight: 600;
   font-family: Verdana, Verdana, Geneva, sans-serif;
   color: #48484A;
+  text-align: center;
 }
 
 .text-xl {
@@ -321,6 +445,33 @@ a:hover {
 
 .text-xs {
   font-size: 80%;
+}
+
+.sliderContainer {
+  width: 144px;
+  height: 144px;
+  margin: 0 auto;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  width: 1000px;
+}
+
+.slider li {
+  float: left;
+}
+
+.slider-nav {
+  display: none;
+}
+
+.slider-nav button {
+  padding: 1em;
+  cursor: pointer;
 }
 
 /* Welcome to Compass. Use this file to define print styles.
@@ -335,3 +486,18 @@ a:hover {
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}

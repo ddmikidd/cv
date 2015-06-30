@@ -8,14 +8,19 @@
 @import "compass/css3";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+//@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
-@import "vars";  // Imports default variables and mixins.
+// Imports default variables, susy and mixins.
+@import "vars";
 @import "layout";
+@import "loading";
 @import "base";
 @import "module";
 @import "state";
 @import "themeone";
 @import "themetwo";
+@import "slider";
 @import "print";
 @import "screen";
 @import "ie";
+
